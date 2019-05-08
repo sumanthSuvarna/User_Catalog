@@ -24,9 +24,10 @@ const SimilarProducts = ({product,id})=> {
 const styles = {
 
     card :{
-      height : "9rem",
+      height : "10rem",
       marginTop:"10px",
-      minWidth:"131px"
+      minWidth:"131px",
+      marginBottom:"20px"
     } ,
     title : {
       fontFamily : "Open Sans",

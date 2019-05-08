@@ -4,6 +4,10 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import { MdFavoriteBorder, MdShare } from "react-icons/md";
 import { FaUserAlt } from "react-icons/fa";
+import { MdCall,MdEmail } from "react-icons/md";
+import { IoMdChatbubbles } from "react-icons/io";
+
+
 
 const ProductInfo = ({product,style}) => {
     return (
@@ -82,9 +86,19 @@ const ProductInfo = ({product,style}) => {
 
                 </div>      
                 <div>
-                    <div className="alert"  style={styles.alert} role="alert"> +60126362400</div>
-                    <div className="alert"  style={styles.alert} role="alert"> +60126362400</div>
-                    <div className="alert"  style={styles.alert} role="alert"> +60126362400</div>
+
+                    <div className="alert"  style={styles.alert} role="alert">
+                        <MdCall />
+                        <span  style={{paddingLeft:"8px"}}>{product.attributes.phone}</span>
+                    </div>
+                    <div className="alert"  style={styles.alert} role="alert"> 
+                        <MdEmail />
+                        <span  style={{paddingLeft:"8px",fontSize:"14px"}}>Email</span>
+                    </div>
+                    <div className="alert"  style={styles.alertChat} role="alert"> 
+                        < IoMdChatbubbles />
+                        <span  style={{paddingLeft:"8px",fontSize:"14px"}}>Chat</span>
+                    </div>
                 </div>                                                
 
             </Card.Body>
@@ -157,17 +171,32 @@ const styles = {
     alert: {
       width : "100%",
       height :"30px",
-      fontSize : "12px",
+      fontSize : "16px",
       color:"red",
       fontFamily:"Open Sans",
       float:"left",
       position: "relative",
-      padding: ".25rem 1rem",
+      padding: "0rem 1rem",
       marginBottom: "5px",
       border: "2px solid transparent",
       borderRadius: ".5rem",
       borderColor: "#E01A1A"
-    }
+    },
+    alertChat: {
+        width : "100%",
+        height :"30px",
+        fontSize : "16px",
+        color:"white",
+        backgroundColor:"red",
+        fontFamily:"Open Sans",
+        float:"left",
+        position: "relative",
+        padding: "0rem 1rem",
+        marginBottom: "5px",
+        border: "2px solid transparent",
+        borderRadius: ".5rem",
+        borderColor: "#E01A1A"
+      }
 }
 
 ProductInfo.propTypes = {
