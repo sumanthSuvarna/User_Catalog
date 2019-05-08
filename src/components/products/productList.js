@@ -24,7 +24,7 @@ class ProductList extends Component {
 
   buildProducts(products) {
     const elements = []
-    {products.map(
+    {products.map(              //eslint-disable-line import/no-lone-blocks      
       (product) => elements.push(
         <GridTile key={product.id} id={product.id} product={product} />
       )
